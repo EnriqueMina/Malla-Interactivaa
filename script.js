@@ -1,20 +1,37 @@
 document.querySelectorAll('input[type="checkbox"]').forEach((checkbox, index) => {
   const id = `checkbox-${index}`;
 
-  // Cargar estado guardado
+  // Cargar estado anterior
   const saved = localStorage.getItem(id);
   if (saved === 'true') {
     checkbox.checked = true;
     checkbox.parentElement.classList.add('tachado');
   }
 
-  // Escuchar cambios y guardar
-  checkbox.addEventListener('change', function () {
+  // Escuchar cambios
+  checkbox.addEventListener('change', () => {
     localStorage.setItem(id, checkbox.checked);
     if (checkbox.checked) {
-      this.parentElement.classList.add('tachado');
+      checkbox.parentElement.classList.add('tachado');
     } else {
-      this.parentElement.classList.remove('tachado');
+      checkbox.parentElement.classList.remove('tachado');
     }
+    verificarFinal();
   });
 });
+
+// Verificar si todas están marcadas
+function verificarFinal() {
+  const todos = Array.from(document.querySelectorAll('input[type="checkbox"]'));
+  const completados = todos.every(cb => cb.checked);
+
+  const mensaje = document.getElementById('mensaje-final');
+  if (completados) {
+    mensaje.classList.add('visible');
+  } else {
+    mensaje.classList.remove('visible');
+  }
+}
+
+// Llamar al inicio también
+verificarFinal();
