@@ -1,93 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Malla Curricular - Tecnología en Electrónica Industrial Carlos Enrique Solis Mina</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<h1>Malla Curricular - Tecnología en Electrónica Industrial <br><span style="font-weight: 400;">Carlos Enrique Solis Mina</span></h1>
+  <h1>Malla Curricular - Tecnología en Electrónica Industrial<br><span>Carlos Enrique Solis Mina</span></h1>
 
+  <div class="contenedor">
+    <!-- Columna izquierda: Semestres 1 a 3 -->
+    <div class="columna">
+      <div class="semestre">
+        <h2> 1 Semestre </h2>
+        <label><input type="checkbox" /> Cálculo Diferencial</label>
+        <label><input type="checkbox" /> Cátedra Francisco José de Caldas</label>
+        <label><input type="checkbox" /> Álgebra Lineal</label>
+        <label><input type="checkbox" /> Cátedra Democracia y Ciudadanía</label>
+        <label><input type="checkbox" /> Producción y Comprensión de Textos I</label>
+        <label><input type="checkbox" /> Ciencia Tecnología y Sociedad</label>
+        <label><input type="checkbox" /> Informática y Algoritmos</label>
+        <label><input type="checkbox" /> Introducción a la Electrónica</label>
+      </div>
 
-  <!-- 1 Semestre  -->
-  <div class="semestre">
-    <h2> 1 Semestre </h2>
-    <ul>
-      <li><input type="checkbox" id="s1_mat1"> Cálculo Diferencial</li>
-      <li><input type="checkbox" id="s1_mat2"> Cátedra Francisco José de Caldas</li>
-      <li><input type="checkbox" id="s1_mat3"> Álgebra Lineal</li>
-      <li><input type="checkbox" id="s1_mat4"> Cátedra Democracia y Ciudadanía</li>
-      <li><input type="checkbox" id="s1_mat5"> Producción y Comprensión de Textos I</li>
-      <li><input type="checkbox" id="s1_mat6"> Ciencia Tecnología y Sociedad</li>
-      <li><input type="checkbox" id="s1_mat7"> Informática y Algoritmos</li>
-      <li><input type="checkbox" id="s1_mat8"> Introducción a la Electrónica</li>
-    </ul>
-  </div>
+      <div class="semestre">
+        <h2> 2 Semestre </h2>
+        <label><input type="checkbox" /> Producción y Comprensión de Textos II</label>
+        <label><input type="checkbox" /> Ética y Sociedad</label>
+        <label><input type="checkbox" /> Física I</label>
+        <label><input type="checkbox" /> Cálculo Integral</label>
+        <label><input type="checkbox" /> Circuitos Eléctricos I</label>
+        <label><input type="checkbox" /> Lenguaje de Programación</label>
+        <label><input type="checkbox" /> Electiva</label>
+      </div>
 
-  <!-- 2 Semestre -->
-  <div class="semestre">
-    <h2> 2 Semestre </h2>
-    <ul>
-      <li><input type="checkbox" id="s2_mat1"> Producción y Comprensión de Textos II</li>
-      <li><input type="checkbox" id="s2_mat2"> Ética y Sociedad</li>
-      <li><input type="checkbox" id="s2_mat3"> Física I</li>
-      <li><input type="checkbox" id="s2_mat4"> Cálculo Integral</li>
-      <li><input type="checkbox" id="s2_mat5"> Circuitos Eléctricos I</li>
-      <li><input type="checkbox" id="s2_mat6"> Lenguaje de Programación</li>
-      <li><input type="checkbox" id="s2_mat7"> Electiva</li>
-    </ul>
-  </div>
+      <div class="semestre">
+        <h2> 3 Semestre </h2>
+        <label><input type="checkbox" /> Cátedra de Contexto</label>
+        <label><input type="checkbox" /> Segunda Lengua I</label>
+        <label><input type="checkbox" /> Cálculo Multivariado</label>
+        <label><input type="checkbox" /> Física II</label>
+        <label><input type="checkbox" /> Circuitos Eléctricos II</label>
+        <label><input type="checkbox" /> Electrónica I</label>
+        <label><input type="checkbox" /> Circuitos Digitales I</label>
+      </div>
+    </div>
 
-  <!-- 3 Semestre -->
-  <div class="semestre">
-    <h2> 3 Semestre </h2>
-    <ul>
-      <li><input type="checkbox" id="s3_mat1"> Cátedra de Contexto</li>
-      <li><input type="checkbox" id="s3_mat2"> Segunda Lengua I</li>
-      <li><input type="checkbox" id="s3_mat3"> Cálculo Multivariado</li>
-      <li><input type="checkbox" id="s3_mat4"> Física II</li>
-      <li><input type="checkbox" id="s3_mat5"> Circuitos Eléctricos II</li>
-      <li><input type="checkbox" id="s3_mat6"> Electrónica I</li>
-      <li><input type="checkbox" id="s3_mat7"> Circuitos Digitales I</li>
-    </ul>
-  </div>
+    <!-- Columna derecha: Semestres 4 a 6 -->
+    <div class="columna">
+      <div class="semestre">
+        <h2> 4 Semestre </h2>
+        <label><input type="checkbox" /> Segunda Lengua II</label>
+        <label><input type="checkbox" /> Ecuaciones Diferenciales</label>
+        <label><input type="checkbox" /> Operación y Mantenimiento de Equipos</label>
+        <label><input type="checkbox" /> Máquinas Eléctricas</label>
+        <label><input type="checkbox" /> Circuitos Digitales II</label>
+        <label><input type="checkbox" /> Electrónica II</label>
+      </div>
 
-  <!-- 4 Semestre -->
-  <div class="semestre">
-    <h2> 4 Semestre </h2>
-    <ul>
-      <li><input type="checkbox" id="s4_mat1"> Segunda Lengua II</li>
-      <li><input type="checkbox" id="s4_mat2"> Ecuaciones Diferenciales</li>
-      <li><input type="checkbox" id="s4_mat3"> Operación y Mantenimiento de Equipos</li>
-      <li><input type="checkbox" id="s4_mat4"> Máquinas Eléctricas</li>
-      <li><input type="checkbox" id="s4_mat5"> Circuitos Digitales II</li>
-      <li><input type="checkbox" id="s4_mat6"> Electrónica II</li>
-    </ul>
-  </div>
+      <div class="semestre">
+        <h2> 5 Semestre </h2>
+        <label><input type="checkbox" /> Segunda Lengua III</label>
+        <label><input type="checkbox" /> Electiva Administrativa</label>
+        <label><input type="checkbox" /> Electiva Profesional I</label>
+        <label><input type="checkbox" /> Diseño Digital Avanzado</label>
+        <label><input type="checkbox" /> Electrónica Industrial</label>
+        <label><input type="checkbox" /> Taller de Investigación</label>
+      </div>
 
-  <!-- 5 Semestre -->
-  <div class="semestre">
-    <h2> 5 Semestre </h2>
-    <ul>
-      <li><input type="checkbox" id="s5_mat1"> Segunda Lengua III</li>
-      <li><input type="checkbox" id="s5_mat2"> Electiva Administrativa</li>
-      <li><input type="checkbox" id="s5_mat3"> Electiva Profesional I</li>
-      <li><input type="checkbox" id="s5_mat4"> Diseño Digital Avanzado</li>
-      <li><input type="checkbox" id="s5_mat5"> Electrónica Industrial</li>
-      <li><input type="checkbox" id="s5_mat6"> Taller de Investigación</li>
-    </ul>
-  </div>
-
-  <!-- 6 Semestre  -->
-  <div class="semestre">
-    <h2> 6 Semestre </h2>
-    <ul>
-      <li><input type="checkbox" id="s6_mat1"> Electiva Profesional II</li>
-      <li><input type="checkbox" id="s6_mat2"> Electiva Profesional III</li>
-      <li><input type="checkbox" id="s6_mat3"> Sistemas de Control</li>
-      <li><input type="checkbox" id="s6_mat4"> Sistemas de Comunicaciones</li>
-      <li><input type="checkbox" id="s6_mat5"> Electrónica Aplicada</li>
-    </ul>
+      <div class="semestre">
+        <h2> 6 Semestre </h2>
+        <label><input type="checkbox" /> Electiva Profesional II</label>
+        <label><input type="checkbox" /> Electiva Profesional III</label>
+        <label><input type="checkbox" /> Sistemas de Control</label>
+        <label><input type="checkbox" /> Sistemas de Comunicaciones</label>
+        <label><input type="checkbox" /> Electrónica Aplicada</label>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
