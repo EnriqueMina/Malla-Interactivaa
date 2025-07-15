@@ -3,14 +3,14 @@ const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 checkboxes.forEach((checkbox, index) => {
   const id = `checkbox-${index}`;
 
-  // Restaurar estado
+  // Restaurar estado guardado
   const saved = localStorage.getItem(id);
   if (saved === 'true') {
     checkbox.checked = true;
     checkbox.parentElement.classList.add('tachado');
   }
 
-  // Guardar estado y verificar
+  // Escuchar cambios
   checkbox.addEventListener('change', () => {
     localStorage.setItem(id, checkbox.checked);
     checkbox.parentElement.classList.toggle('tachado', checkbox.checked);
@@ -26,9 +26,10 @@ function verificarFinal() {
   }
 }
 
-// Mostrar mensaje y limpiar pantalla
+// Muestra el mensaje final sin borrar el script
 function mostrarMensajeFinal() {
-  document.body.innerHTML = `
+  const contenedor = document.querySelector('.contenedor');
+  contenedor.innerHTML = `
     <div id="mensaje-final" style="
       text-align: center;
       background-color: #22c55e;
@@ -44,12 +45,7 @@ function mostrarMensajeFinal() {
       🎉 ¡LO LOGRASTE! 🎓<br>Terminaste toda la malla curricular.
     </div>
   `;
-
-  // Opción: limpiar localStorage después de mostrar mensaje
-  setTimeout(() => {
-    localStorage.clear();
-  }, 5000); // espera 5 segundos antes de borrar
 }
 
-// Verificar también al cargar
+// Verifica también al cargar
 verificarFinal();
