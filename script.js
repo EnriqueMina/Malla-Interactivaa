@@ -22,27 +22,36 @@ checkboxes.forEach((checkbox, index) => {
 function verificarFinal() {
   const todosMarcados = Array.from(checkboxes).every(cb => cb.checked);
   if (todosMarcados) {
-    // Limpiar todo el body
-    document.body.innerHTML = `
-      <div id="mensaje-final" style="
-        text-align: center;
-        background-color: #22c55e;
-        color: #0f172a;
-        padding: 2rem;
-        font-size: 2rem;
-        font-weight: bold;
-        border-radius: 12px;
-        max-width: 600px;
-        margin: 5rem auto;
-        box-shadow: 0 0 20px rgba(0,0,0,0.4);
-      ">
-        🎉 ¡LO LOGRASTE! 🎓<br>Terminaste toda la malla curricular.
-      </div>
-    `;
-    localStorage.clear(); // (opcional) limpia el progreso guardado
+    mostrarMensajeFinal();
   }
+}
+
+// Mostrar mensaje y limpiar pantalla
+function mostrarMensajeFinal() {
+  document.body.innerHTML = `
+    <div id="mensaje-final" style="
+      text-align: center;
+      background-color: #22c55e;
+      color: #0f172a;
+      padding: 2rem;
+      font-size: 2rem;
+      font-weight: bold;
+      border-radius: 12px;
+      max-width: 600px;
+      margin: 5rem auto;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    ">
+      🎉 ¡LO LOGRASTE! 🎓<br>Terminaste toda la malla curricular.
+    </div>
+  `;
+
+  // Opción: limpiar localStorage después de mostrar mensaje
+  setTimeout(() => {
+    localStorage.clear();
+  }, 5000); // espera 5 segundos antes de borrar
 }
 
 // Verificar también al cargar
 verificarFinal();
+
 
