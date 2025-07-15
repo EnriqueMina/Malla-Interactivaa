@@ -10,6 +10,26 @@ h1 {
   color: #38bdf8;
   text-align: center;
   margin-bottom: 3rem;
+  font-size: 1.8rem;
+}
+
+h1 span {
+  font-weight: 400;
+  color: #facc15;
+}
+
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.columna {
+  flex: 1;
+  min-width: 300px;
 }
 
 .semestre {
@@ -24,7 +44,7 @@ h1 {
 .semestre h2 {
   margin-top: 0;
   color: #facc15;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 label {
