@@ -53,5 +53,3 @@ function mostrarMensajeFinal() {
 
 // Verificar también al cargar
 verificarFinal();
-
-
