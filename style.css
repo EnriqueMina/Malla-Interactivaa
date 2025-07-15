@@ -7,14 +7,14 @@ body {
 }
 
 h1 {
-  color: #38bdf8;
   text-align: center;
-  margin-bottom: 3rem;
+  color: #38bdf8;
+  margin-bottom: 2rem;
   font-size: 1.8rem;
 }
 
 h1 span {
-  font-weight: 400;
+  font-size: 1.2rem;
   color: #facc15;
 }
 
@@ -42,9 +42,7 @@ h1 span {
 }
 
 .semestre h2 {
-  margin-top: 0;
   color: #facc15;
-  font-size: 1.4rem;
 }
 
 label {
@@ -72,23 +70,3 @@ input[type="checkbox"] {
   color: #94a3b8;
   background-color: #1e293b;
 }
-#mensaje-final {
-  text-align: center;
-  background-color: #22c55e;
-  color: #0f172a;
-  padding: 1.5rem;
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-top: 3rem;
-  border-radius: 12px;
-  display: none;
-}
-
-#mensaje-final.visible {
-  display: block;
-}
-
-.oculto {
-  display: none;
-}
-
