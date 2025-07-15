@@ -27,6 +27,7 @@ h1 span {
   margin: auto;
 }
 
+
 .columna {
   flex: 1;
   min-width: 300px;
@@ -72,3 +73,23 @@ input[type="checkbox"] {
   color: #94a3b8;
   background-color: #1e293b;
 }
+#mensaje-final {
+  text-align: center;
+  background-color: #22c55e;
+  color: #0f172a;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 3rem;
+  border-radius: 12px;
+  display: none;
+}
+
+#mensaje-final.visible {
+  display: block;
+}
+
+.oculto {
+  display: none;
+}
+
