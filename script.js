@@ -1,37 +1,48 @@
-document.querySelectorAll('input[type="checkbox"]').forEach((checkbox, index) => {
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+checkboxes.forEach((checkbox, index) => {
   const id = `checkbox-${index}`;
 
-  // Cargar estado anterior
+  // Restaurar estado
   const saved = localStorage.getItem(id);
   if (saved === 'true') {
     checkbox.checked = true;
     checkbox.parentElement.classList.add('tachado');
   }
 
-  // Escuchar cambios
+  // Guardar estado y verificar
   checkbox.addEventListener('change', () => {
     localStorage.setItem(id, checkbox.checked);
-    if (checkbox.checked) {
-      checkbox.parentElement.classList.add('tachado');
-    } else {
-      checkbox.parentElement.classList.remove('tachado');
-    }
+    checkbox.parentElement.classList.toggle('tachado', checkbox.checked);
     verificarFinal();
   });
 });
 
-// Verificar si todas están marcadas
+// Verifica si todas están marcadas
 function verificarFinal() {
-  const todos = Array.from(document.querySelectorAll('input[type="checkbox"]'));
-  const completados = todos.every(cb => cb.checked);
-
-  const mensaje = document.getElementById('mensaje-final');
-  if (completados) {
-    mensaje.classList.add('visible');
-  } else {
-    mensaje.classList.remove('visible');
+  const todosMarcados = Array.from(checkboxes).every(cb => cb.checked);
+  if (todosMarcados) {
+    // Limpiar todo el body
+    document.body.innerHTML = `
+      <div id="mensaje-final" style="
+        text-align: center;
+        background-color: #22c55e;
+        color: #0f172a;
+        padding: 2rem;
+        font-size: 2rem;
+        font-weight: bold;
+        border-radius: 12px;
+        max-width: 600px;
+        margin: 5rem auto;
+        box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      ">
+        🎉 ¡LO LOGRASTE! 🎓<br>Terminaste toda la malla curricular.
+      </div>
+    `;
+    localStorage.clear(); // (opcional) limpia el progreso guardado
   }
 }
 
-// Llamar al inicio también
+// Verificar también al cargar
 verificarFinal();
+
